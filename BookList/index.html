@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+
+    <style>
+      .success,
+      .error {
+        color: #fff;
+        padding: 5px;
+        margin: 5px 0 15px 0;
+      }
+
+      .success {
+        background: green;
+      }
+
+      .error {
+        background: red;
+      }
+
+      #heading {
+        background: url('./landscapes.jpg');
+        margin-top: 5px;
+      }
+    </style>
+    <title>Book List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="heading" class="display-2 text-center">
+        Please Add Your Book
+      </h1>
+
+      <form id="book-form">
+        <div class="form-group">
+          <label class="text-success" for="title">Title</label>
+          <input type="text" id="title" class="form-control " />
+        </div>
+        <div class="form-group ">
+          <label for="author" class="text-warning">Author</label>
+          <input type="text" id="author" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="isbn" class="text-primary">ISBN#</label>
+          <input type="text" id="isbn" class="form-control" />
+        </div>
+      </form>
+      <div>
+        <button class="btn btn-outline-secondary btn-block">
+          Submit
+        </button>
+      </div>
+
+      <table class="u-full-width table table-hover">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+
+    <script src="appES6.js"></script>
+  </body>
+</html>
